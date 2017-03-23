@@ -8,12 +8,12 @@
   <body>
       <div class="calculadora">
         <form action="#" name="formCalculadora" id="calculadora">
-          <p><input type="text" id="txtNumero" value="0"></p>
+          <p><input type="text" id="entradaNum" value="0"></p>
           <p>
             <input type=reset value="C" name="reset">
           </p>
           <p>
-            <input type="button" value="7" onclick="asignarNumero( '7')"/>
+            <input type="button" value="7" onclick="asignarNumero(value)"/>
             <input type="button" value="8" onclick="asignarNumero('8')"/>
             <input type="button" value="9" onclick="asignarNumero('9')"/>
             <input type="button" value="/"  onclick="asignarNumero('/')"/>
@@ -34,14 +34,13 @@
             <input type="button" value="0" onclick="asignarNumero('0')"/>
             <input type="button" value="^" onclick="asignarNumero('^')"/>
             <input type="button" value="+" onclick="asignarNumero('+')"/>
-            <input type="button" value="=" onclick="asignarNumero('=')"/>
+            <input type="button" value="=" onclick="igual()"/>
           </p>
           <p>
             <inpu
           </p>
         </form>
       </div>
-      <script src="calculadora.js"></script>
     </body>
   </html>
 
