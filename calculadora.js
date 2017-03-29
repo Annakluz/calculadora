@@ -31,46 +31,31 @@ function operar(valor){
     operacion = valor;
 }
 
-function operaciones(oper){
-  var operac = {
-    sumar : function suma(numero1, numero2) {
-          return parseInt(numero1)+parseInt(numero2);
-    }
-    restar : function resta(numero1, numero2){
-          return parseint(numero1)-parseint(numero2);
-    }
-
+function igual(){
+    numero1 = parseFloat(valorNumerico);
+	switch (operacion){
+		case 1:
+			numero1 = numero2 + numero1;
+		break;
+		case 2:
+			numero1 = numero2 - numero1;
+		break;
+		case 3:
+			numero1 *= numero2;
+		break;
+		case 4:
+			numero1 = numero2 / numero1;
+		break;
+		case 5:
+			numero1 = Math.pow(numero2, numero1);
+		break;
+    case 6:
+    numero1 = Math.sqrt(numero2, numero1);
+    break;
+    case 7:
+    numero1 = Math.log(numero2, numero1);
+    break;
+	}
+	document.getElementById("textoCalculadora").value = numero1;
+	numero2 = parseInt(numero1);
 }
-switch(oper){
-  case "sumar" :
-        var resultado = operac.sumar(numero1, numero2);
-        break
-}
-
-/*function igual(){
-    switch (memoriaop){
-              case 'suma':
-                   var op = operacion.split("+");
-                   var resultado = ops.sumar(op[0], op[1]);
-                   document.getElementById("resultado").value = resultado;
-                   break;
-               case 'resta':
-                   var op = operacion.split("-");
-                   var resultado = ops.restar(op[0], op[1]);
-                   document.getElementById("resultado").value = resultado;
-                   break;
-               case 'multiplicacion':
-                   var op = operacion.split("*");
-                   var resultado = ops.multiplicar(op[0], op[1]);
-                   document.getElementById("resultado").value = resultado;
-                   break;
-               case 'division':
-                   var op = operacion.split("/");
-                   var resultado = ops.dividir(op[0], op[1]);
-                   document.getElementById("resultado").value = resultado;
-                   break;
-    }
-    document.getElementById("entradaNum").value = numero1;
-    numero2 = parseInt(numero1);
-}
-*/
